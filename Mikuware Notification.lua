@@ -1,5 +1,5 @@
--- custom notify 
--- Mikuware Notification System
+-- custom notify
+-- Mikuware Notification 
 local TweenService = game:GetService("TweenService")
 local TextService = game:GetService("TextService")
 local CoreGui = game:GetService("CoreGui")
@@ -52,19 +52,6 @@ local function MikuNotify(message, duration)
     accentBar.BackgroundColor3 = MIKU_PINK
     accentBar.BorderSizePixel = 0
     accentBar.Parent = notifyFrame
-    
-    -- Decorative corners
-    local function createCorner(size, position)
-        local corner = Instance.new("Frame")
-        corner.Size = UDim2.new(0, size, 0, size)
-        corner.Position = position
-        corner.BackgroundColor3 = MIKU_PINK
-        corner.BorderSizePixel = 0
-        corner.Parent = notifyFrame
-    end
-    
-    createCorner(8, UDim2.new(0, 0, 0, 0)) -- Top-left
-    createCorner(8, UDim2.new(1, -8, 0, 0)) -- Top-right
     
     -- White border
     local stroke = Instance.new("UIStroke")
@@ -133,5 +120,5 @@ local function MikuNotify(message, duration)
 end
 
 -- Example usage:
--- MikuNotify("Hello World!", 3) -- Shows for 3 seconds
--- MikuNotify("This is a notification") -- Default duration (3 seconds)
+MikuNotify("Hello World!", 3) -- Shows for 3 seconds
+MikuNotify("This is a notification") -- Default duration (3 seconds)
